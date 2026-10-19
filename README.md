@@ -160,6 +160,8 @@ Các bài kiểm thử không cần tải model embedding hoặc gọi LLM.
 
 Project có cấu hình entrypoint trong `pyproject.toml`, phiên bản Python trong `.python-version` và bản corpus nhỏ gọn trong `data/`. Từ thư mục `policyassist_python`, chạy:
 
+Deployment production hiện tại: [https://policyassist-backend.vercel.app](https://policyassist-backend.vercel.app). Trang UI/docs ở `/`, API hỏi đáp ở `/ask`, health ở `/health` và Swagger ở `/docs`.
+
 ```powershell
 npm install --global vercel
 vercel login

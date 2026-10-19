@@ -24,6 +24,13 @@ Trang gốc (`/`) có hướng dẫn endpoint, ví dụ gọi API và form thử
 
 ### Deploy trên Vercel
 
+Production deployment hiện tại:
+
+- Trang docs/playground: [https://policyassist-backend.vercel.app/](https://policyassist-backend.vercel.app/)
+- Health: [https://policyassist-backend.vercel.app/health](https://policyassist-backend.vercel.app/health)
+- Hỏi đáp: `POST https://policyassist-backend.vercel.app/ask`
+- Swagger: [https://policyassist-backend.vercel.app/docs](https://policyassist-backend.vercel.app/docs)
+
 Từ thư mục `policyassist_python`, cài Vercel CLI, đăng nhập và liên kết project:
 
 ```powershell
@@ -232,7 +239,7 @@ Mặc định không cần LLM và không gọi dịch vụ AI trả phí.
 
 ## 9. Lưu ý triển khai
 
-- API hiện không có xác thực người dùng; chỉ chạy trong máy/mạng phát triển đáng tin cậy. Không mở trực tiếp ra Internet nếu chưa bổ sung xác thực, giới hạn truy cập và HTTPS.
+- Deployment production hiện được phục vụ công khai và API chưa có xác thực người dùng. Không gửi dữ liệu bí mật/cá nhân; trước khi dùng nội bộ hoặc production thật, bổ sung xác thực và giới hạn truy cập.
 - Không đặt API key bí mật trong frontend. Cấu hình CORS không phải cơ chế xác thực.
 - `confidence` là điểm heuristic từ retrieval, không phải xác suất hiệu chuẩn.
 - Kết quả căn cứ vào Data Pack; tài liệu `SIMULATED_INTERNAL` là giả lập và `NORMALIZED_SUMMARY` không phải nguyên văn văn bản pháp luật.
